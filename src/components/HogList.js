@@ -16,6 +16,7 @@ class HogList extends Component {
   }
 
   render () {
+    console.log(this.state)
     return (
       <div>
       {hogs.map(hog => {
@@ -27,6 +28,7 @@ class HogList extends Component {
           weightToFridgeRatio={hog.weightToFridgeRatio}
           highestMedalAchieved={hog.highestMedalAchieved}
           handleClick={this.updateSelectedHog}
+          selectedHog={this.state.selectedHog}
           />
       })}
       </div>
